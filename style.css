@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+* {
+  animation: backInDown;
+  animation-duration: 1s;
+}
 
 body {
   margin: 0;
@@ -12,12 +16,39 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-#Presentación{
-  font-size: 200%;
+table {
+  width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#Contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ranking{
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Presentación {
+  margin: 30px;
+  font-size: 150%;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  background:rgba(245, 219, 219, 0.1);
+  background: rgba(245, 219, 219, 0.1);
 }
 
 #contenedorPreguntas {
@@ -47,9 +78,8 @@ body {
   height: 100px;
 }
 
-.btnRojo,.btn{
+.btnRojo, .btnAmarillo, .btn {
   margin: 10px;
-  padding: 10px;
   min-width: 300px;
   cursor: pointer;
   user-select: none;
@@ -61,7 +91,21 @@ body {
   text-align: center;
 }
 
+.btnRojo:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.btnAmarillo {
+  background: rgba(255, 200, 0, 0.5);
+  text-align: center;
+}
+
+.btnAmarillo:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
 .btn {
+  padding: 10px;
   background: rgba(255, 255, 255, 0.3);
 }
 

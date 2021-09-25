@@ -27,7 +27,6 @@ function interpretadorBaseDatos(data) {
         categorias[i].sort(() => Math.random() - 0.5)
     }
     escogerPregunta(contadorPreguntas);
-    cambiarPantalla("juego")
 }
 
 function readLocalStorage(nombre) {
@@ -43,7 +42,7 @@ function actualizarBaseDeDatos() {
         url: urlBaseDeDatos,
         success: function (data) {
             localStorage.setItem(urlBaseDeDatos, data);
-            interpretadorBaseDatos(data)
+            actualizarBaseDeDatos(data)
         }
     });
 }

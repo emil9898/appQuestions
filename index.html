@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Libs js/animate.css">
     <script src="Libs js/jquery.js"></script>
     <script src="Libs js/SweetAlert2.js"></script>
 </head>
@@ -23,17 +24,29 @@
 
         anguloFondo = 0
         setInterval(() => {
-            anguloFondo += 0.6
+            anguloFondo += 1
             document.body.style.background = `linear-gradient(${anguloFondo}deg,#19046F, #93006F)`
-        }, 10);
+        }, 20);
     </script>
 
-    <div id="Contenedor">
+    <div id="Contenedor" >
         <div id="Presentación">
             Trabajo desarrollado por
             <br>
             Emiliano Gamarra
         </div>
+
+        <div id="ranking">
+            Historial de partidas
+            <table cellspacing="0" cellpadding="0">
+                <tbody id="tablaRanking">
+                </tbody>
+            </table>
+            <div class="btn" onclick="contadorPreguntas = 0;BotonesFuncionales = true;cambiarPantalla('juego')">
+                Juego
+            </div>
+        </div>
+
         <div id="Juego" style="display: none;">
             <div id="contenedorPreguntas">
                 <div id="categoria">CATEGORIA</div>
@@ -46,12 +59,15 @@
                 <div class="btnRojo" onclick="terminarJuegoVoluntario()">
                     Fin de juego voluntario
                 </div>
+                <div class="btnAmarillo" onclick="cambiarPantalla('ranking')">
+                    Historial
+                </div>
             </div>
             <div id="saldoJugador">
                 $0
             </div>
             <div style="width: 400px;text-align: right;padding: 0;">
-                <div class="btn" style="width: 100px;display: inline;padding: 5px;" onclick="borrarSaldo()">
+                <div class="btn" style="width: 100px;display: none;padding: 5px;" onclick="borrarSaldo()">
                     Borrar saldo
                 </div>
             </div>

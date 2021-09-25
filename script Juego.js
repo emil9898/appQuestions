@@ -4,23 +4,47 @@ let segundosEsperar_cuandoResponda = 3 * 1000;
 let BotonesFuncionales = true;
 
 let saldoJugador = 0
-if (localStorage.getItem("saldoJugador")) {
-  saldoJugador = Number(localStorage.getItem("saldoJugador"))
-  swal.fire("Saldo Inicial", "Tu saldo es de: " + saldoJugador.formatMoney())
-} else {
-  localStorage.setItem("saldoJugador", saldoJugador)
-}
 document.getElementById("saldoJugador").innerHTML = "Dinero ganado: " + saldoJugador.formatMoney()
+
+Ranking = JSON.parse(localStorage.getItem("Ranking"))
+
+if (Ranking == null) {
+  Ranking = []
+  let html = ""
+  html += `
+    <tr>
+      <td>No hay Historial aún</td>
+    </tr>
+    `
+  document.getElementById("tablaRanking").innerHTML = html
+} else {
+  actualizarTablaHistorial()
+}
+
+
+function actualizarTablaHistorial() {
+  let html = ""
+  for (const r of Ranking) {
+    html += `
+    <tr>
+      <td>${r.nombre}</td>
+      <td>${r.puntaje}</td>
+    </tr>
+    `
+  }
+  document.getElementById("tablaRanking").innerHTML = html
+}
 
 function borrarSaldo() {
   saldoJugador = 0
-  localStorage.setItem("saldoJugador", saldoJugador)
+
   document.getElementById("saldoJugador").innerHTML = "Dinero ganado: " + saldoJugador.formatMoney()
 }
 
 function cambiarPantalla(pantalla) {
   document.getElementById("Juego").style.display = "none"
   document.getElementById("Presentación").style.display = "none"
+  document.getElementById("ranking").style.display = "none"
 
   switch (pantalla) {
     case "juego":
@@ -28,6 +52,12 @@ function cambiarPantalla(pantalla) {
       break
     case "presentación":
       document.getElementById("Presentación").style.display = "inline-block"
+      if (Ranking) {
+        document.getElementById("ranking").style.display = "inline-block"
+      }
+      break
+    case "ranking":
+      document.getElementById("ranking").style.display = "inline-block"
       break
   }
 }
@@ -105,6 +135,10 @@ async function validarRespuesta(i) {
       "error"
     )
     terminarJuego()
+    for (let i = 0; i < botonesHTML.length; i++) {
+      const boton = botonesHTML[i];
+      botonesHTML[i].style.background = "";
+    }
   }
 }
 
@@ -117,8 +151,22 @@ async function terminarJuegoVoluntario() {
   terminarJuego()
 }
 
-function terminarJuego() {
+async function terminarJuego() {
   BotonesFuncionales = false;
-  localStorage.setItem("saldoJugador", saldoJugador)
+  let { value: nombre } = await swal.fire({
+    input: "text",
+    title: "Escriba su nombre"
+  })
+  Ranking.push(new RegistroHistorico(nombre, saldoJugador.formatMoney()))
+  if (Ranking.length > 10) {
+    Ranking.shift()
+  }
+  localStorage.setItem("Ranking", JSON.stringify(Ranking))
+  actualizarTablaHistorial()
   cambiarPantalla("presentación")
+}
+
+function RegistroHistorico(nombre, puntaje) {
+  this.nombre = nombre
+  this.puntaje = puntaje
 }
