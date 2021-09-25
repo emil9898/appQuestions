@@ -43,7 +43,7 @@ function actualizarBaseDeDatos() {
         url: urlBaseDeDatos,
         success: function (data) {
             localStorage.setItem(urlBaseDeDatos, data);
-            actualizarBaseDeDatos(data)
+            interpretadorBaseDatos(data)
         }
     });
 }
