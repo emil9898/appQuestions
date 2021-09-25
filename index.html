@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Libs js/jquery.js"></script>
+</head>
+
+
+<body>
+
+
+    <script>
+        anguloFondo = 0
+        setInterval(() => {
+            anguloFondo += 0.2
+            document.body.style.background = `linear-gradient(${anguloFondo}deg,#19046F, #93006F)`
+        }, 10);
+    </script>
+
+    <div id="contenedorPreguntas">
+        <div id="pregunta">PREGUNTA</div>
+        <div class="btn" id="btn1" onclick="validarRespuesta(0)">OPN1</div>
+        <div class="btn" id="btn2" onclick="validarRespuesta(1)">OPN2</div>
+        <div class="btn" id="btn3" onclick="validarRespuesta(2)">OPN3</div>
+        <div class="btn" id="btn4" onclick="validarRespuesta(3)">OPN4</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

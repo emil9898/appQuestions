@@ -1,0 +1,153 @@
+[
+    {
+    "id": 1,
+    "pregunta": "¿Qué selecciòn ganò el Mundial de futbol 2018?",
+    "categoria" :"novato",
+    "respuestas": ["Francia","Brasil","Alemania","Italia"]
+    },
+    {
+    "id": 2,
+    "pregunta": "Cual es el pais mas poblado del mundo",
+    "categoria" :"novato",
+    "respuestas": ["China","Nigeria","India","USA"]
+    },
+    {
+    "id": 3,
+    "pregunta": "En que año finalizò la segunda guerra mundial",
+    "categoria" :"novato",
+    "respuestas": ["1945","1939","1944","1946"]
+    },
+    {
+    "id": 4,
+    "pregunta": "Nobel de literatura colombiano",
+    "categoria" :"novato",
+    "respuestas": ["Gabriel Garcia Marquez","Fernando Vallejo","Rafael Pombo","William Ospina"]
+    },
+    {
+    "id": 5,
+    "pregunta": "Departamentos del eje cafetero",
+    "categoria" :"novato",
+    "respuestas": ["Risaralda,Quindio y Caldas","Antioquia, Caldas y Cauca","Cauca,Tolima y Quindio","Arauca y Santander"]
+    },
+    {
+    "id": 6,
+    "pregunta": "Anio de la caida del muro de Berlin ",
+    "categoria" :"facil",
+    "respuestas": ["1989","1999","1990","1991"]
+    },
+    {
+    "id": 7,
+    "pregunta": "Cuantos lados tiene un heptagono",
+    "categoria" :"facil",
+    "respuestas": ["Siete","Seis","Cinco","Nueve"]
+    },
+    {
+    "id": 8,
+    "pregunta": "¿Cual fue la primera civilizaciòn de la humanidad?",
+    "categoria" :"facil",
+    "respuestas": ["Sumeria","Persa","Griega","Egipcia"]
+    },
+    {
+    "id": 9,
+    "pregunta": "Planeta mas grande del sistema solar",
+    "categoria" :"facil",
+    "respuestas": ["Jupiter","Mercurio","Marte","Saturno"]
+    },
+    {
+    "id": 10,
+    "pregunta": "¿Qué religiòn tiene la Torà como libro sagrado?",
+    "categoria" :"facil",
+    "respuestas": ["Judaismo","Islam","Cristianismo","Budismo"]
+    },
+    {
+    "id": 11,
+    "pregunta": "¿De donde es la tradicional Paella",
+    "categoria" :"intermedio",
+    "respuestas": ["Comunidad valenciana","Madrid","Andalucia","Pais Vasco"]
+    },
+    {
+    "id": 12,
+    "pregunta": "En que siglo fue el auge de la epoca victoriana",
+    "categoria" :"intermedio",
+    "respuestas": ["XIX","XX","XVIII","X"]
+    },
+    {
+    "id": 13,
+    "pregunta": "¿Cuantos huesos tiene el cuerpo humano",
+    "categoria" :"intermedio",
+    "respuestas": ["206","200","506","300"]
+    },
+    {
+    "id": 14,
+    "pregunta": "¿Cuantas estrellas hay en la bandera de Estados Unidos?",
+    "categoria" :"intermedio",
+    "respuestas": ["50","51","46","45"]
+    },
+    {
+    "id": 15,
+    "pregunta": "¿Qué carga tienen los electrones",
+    "categoria" :"intermedio",
+    "respuestas": ["Negativa","Neutra","Positiva","Todas las anteriores"]
+    },
+    {
+    "id": 16,
+    "pregunta": "Según la Segunda Ley de Newton, ¿a qué es proporcional la fuerza?",
+    "categoria" :"Dificil",
+    "respuestas": ["Aceleraciòn","temperatura","El peso","Presiòn"]
+    },
+     {
+    "id": 17,
+    "pregunta": "¿Cuál es la ciudad mas poblada del mundo?",
+    "categoria" :"Dificil",
+    "respuestas": ["Tokyo","Seùl","Bombay","Nueva York"]
+    },
+    {
+    "id": 18,
+    "pregunta": "¿Quien ideò las leyes de la herencia gènetica",
+    "categoria" :"Dificil",
+    "respuestas": ["Gregor Mendel","Dimitri Mendeleyev","Charles Darwin","Rosalin Franklin"]
+    },
+    {
+    "id": 19,
+    "pregunta": "¿Qué rama de la mecánica estudia las condiciones para que un cuerpo esté en equilibrio?",
+    "categoria" :"Dificil",
+    "respuestas": ["estatica","temperatura","dinamica","Cinematica"]
+    },
+    {
+    "id": 20,
+    "pregunta": "¿Cual de los siguientes paises NO reconoce el islam como religiòn oficial?",
+    "categoria" :"Dificil",
+    "respuestas": ["Israel","Malasia","Indonesia","Qatar"]
+    },
+    {
+    "id": 21,
+    "pregunta": "¿Cuál es el color que más se desvía al pasar por un prisma la luz?",
+    "categoria" :"Experto",
+    "respuestas": ["Violeta","Azul","Verde","Amarillo"]
+    },
+    {
+    "id": 22,
+    "pregunta": "¿Cuál es la unidad de volumen en el sistema internacional de unidades?",
+    "categoria" :"Experto",
+    "respuestas": ["Metro cùbico","Litro","Galon","Yarda"]
+    },
+    {
+    "id": 23,
+    "pregunta": "¿Qué propiedad del aire altera la velocidad del sonido?",
+    "categoria" :"Experto",
+    "respuestas": ["Temperatura","Volumen","Densidad","Presiòn"]
+    },
+    {
+    "id": 24,
+    "pregunta": "¿Qué color de la luz posee mayor longitud de onda?",
+    "categoria" :"Experto",
+    "respuestas": ["Rojo","Azul","Violeta","Amarilla"]
+    },
+    {
+    "id": 25,
+    "pregunta": "¿Cuántos tipos de aceleración hay en el movimiento circular?",
+    "categoria" :"Experto",
+    "respuestas": ["la aceleración tangencial y la aceleración centrípeta","La aceleraciòn centrifuga","Aceleraciòn lineal","Aceleraciòn 0"]
+    }
+]
+    
