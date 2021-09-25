@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="Libs js/jquery.js"></script>
+    <script src="Libs js/SweetAlert2.js"></script>
 </head>
 
 
@@ -15,21 +16,48 @@
 
 
     <script>
+        Number.prototype.formatMoney = function (n, x) {
+            var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
+            return "$" + this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&.');
+        };
+
         anguloFondo = 0
         setInterval(() => {
             anguloFondo += 0.2
             document.body.style.background = `linear-gradient(${anguloFondo}deg,#19046F, #93006F)`
         }, 10);
     </script>
-
-    <div id="contenedorPreguntas">
-        <div id="pregunta">PREGUNTA</div>
-        <div class="btn" id="btn1" onclick="validarRespuesta(0)">OPN1</div>
-        <div class="btn" id="btn2" onclick="validarRespuesta(1)">OPN2</div>
-        <div class="btn" id="btn3" onclick="validarRespuesta(2)">OPN3</div>
-        <div class="btn" id="btn4" onclick="validarRespuesta(3)">OPN4</div>
+    <div id="Contenedor">
+        <div id="Presentación">
+            Trabajo desarrollado por
+            <br>
+            Emiliano Gamarra
+        </div>
+        <div id="Juego" style="display: none;"></div>
+            <div id="contenedorPreguntas">
+                <div id="categoria">CATEGORIA</div>
+                <div id="pregunta">PREGUNTA</div>
+                <div class="btn" id="btn1" onclick="validarRespuesta(0)">OPN1</div>
+                <div class="btn" id="btn2" onclick="validarRespuesta(1)">OPN2</div>
+                <div class="btn" id="btn3" onclick="validarRespuesta(2)">OPN3</div>
+                <div class="btn" id="btn4" onclick="validarRespuesta(3)">OPN4</div>
+                <br>
+                <div class="btnRojo" onclick="terminarJuegoVoluntario()">
+                    Fin de juego voluntario
+                </div>
+            </div>
+            <div id="saldoJugador">
+                $0
+            </div>
+            <div style="width: 400px;text-align: right;padding: 0;">
+                <div class="btn" style="width: 100px;display: inline;padding: 5px;" onclick="borrarSaldo()">
+                    Borrar saldo
+                </div>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
+    <script src="script BaseDeDatos.js"></script>
 </body>
 
 </html>
